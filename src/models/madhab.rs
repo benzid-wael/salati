@@ -1,5 +1,4 @@
-// Setting for the Asr prayer time.
-// For Hanafi madhab, the Asr will be later
+/// Setting for the Asr prayer time.
 #[derive(PartialEq, Debug, Copy, Clone)]
 pub enum Madhab {
     Shafi = 1,

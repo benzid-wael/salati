@@ -6,7 +6,7 @@ use super::polar_circle_resolution::PolarCircleResolution;
 use super::prayer::Prayer;
 use super::twilight::Twilight;
 
-// Parameters to calculate prayer times
+/// Parameters defines useful information to calculate prayer times.
 #[derive(PartialEq, Debug, Copy, Clone)]
 pub struct Parameters {
     pub method: Method,
@@ -59,7 +59,6 @@ impl Parameters {
 }
 
 /// A builder for the the [Parameters](struct.Parameters.html).
-///
 /// It is recommended that this is used for setting
 /// all parameters that are needed.
 pub struct ParametersBuilder {

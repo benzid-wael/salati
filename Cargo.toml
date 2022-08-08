@@ -8,7 +8,10 @@ rust-version = "1.62.1"
 readme = "README.md"
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "lib"]
+doctest = true
+test = true
+doc = true
 
 [dependencies]
 wasm-bindgen = "0.2.82"

@@ -7,37 +7,37 @@ use super::parameters::{Parameters, ParametersBuilder};
 /// for calculating prayer times.
 #[derive(PartialEq, Debug, Copy, Clone)]
 pub enum Method {
-    // Muslim World League
+    /// Muslim World League
     MuslimWorldLeague,
 
-    //Egyptian General Authority of Survey
+    /// Egyptian General Authority of Survey
     Egyptian,
 
-    // University of Islamic Sciences, Karachi
+    /// University of Islamic Sciences, Karachi
     Karachi,
 
-    // Umm al-Qura University, Makkah
+    /// Umm al-Qura University, Makkah
     UmmAlQura,
 
-    // The Gulf Region
+    /// The Gulf Region
     Dubai,
 
-    // Moonsighting Committee
+    /// Moonsighting Committee
     MoonsightingCommittee,
 
-    // ISNA
+    /// ISNA
     NorthAmerica,
 
-    // Kuwait
+    /// Kuwait
     Kuwait,
 
-    // Qatar
+    /// Qatar
     Qatar,
 
-    // Singapore
+    /// Singapore
     Singapore,
 
-    // Other
+    /// Other
     Other,
 }
 
