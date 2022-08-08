@@ -7,9 +7,11 @@ repos:
     -   id: check-merge-conflict
     -   id: check-symlinks
     -   id: check-yaml
+    -   id: check-toml
     -   id: end-of-file-fixer
     -   id: mixed-line-ending
     -   id: trailing-whitespace
+    -   id: sort-simple-yaml
 
 -   repo: https://github.com/pre-commit/pre-commit
     rev: v2.5.1
@@ -18,6 +20,13 @@ repos:
 
 -   repo: local
     hooks:
+    -   id: cargo-check
+        name: cargo check
+        description: Check the package for errors.
+        entry: cargo check
+        language: system
+        types: [rust]
+        pass_filenames: false
     -   id: rust-linting
         name: Rust linting
         description: Run cargo fmt on files included in the commit. rustfmt should be installed before-hand.
@@ -31,4 +40,9 @@ repos:
         entry: cargo clippy --all-targets --all-features -- -Dclippy::all
         pass_filenames: false
         types: [file, rust]
+        language: system
+    -   id: rust-tests
+        name: Unit Tests
+        description: Run defined tests
+        entry: cargo test
         language: system
