@@ -1,7 +1,9 @@
+use clap::ValueEnum;
+
 use crate::astronomy::unit::Coordinates;
 use crate::constants::is_high_latitude;
 
-#[derive(PartialEq, Debug, Copy, Clone)]
+#[derive(PartialEq, Debug, Copy, Clone, ValueEnum)]
 pub enum HighLatitudeRule {
     MiddleOfTheNight,
     SeventhOfTheNight,

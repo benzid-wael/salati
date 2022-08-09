@@ -112,11 +112,6 @@ impl SolarTime {
             prev_solar.right_ascension,
             next_solar.right_ascension,
         );
-        println!("1- transit_time: {:#?}", transit_time);
-        println!(
-            "2- transit_time: {:#?}",
-            SolarTime::setting_hour(transit_time, &date)
-        );
         let sunrise_time = ops::corrected_hour_angle(
             approx_transit,
             solar_altitude,
@@ -130,11 +125,6 @@ impl SolarTime {
             prev_solar.declination,
             next_solar.declination,
         );
-        println!("1- sunrise_time: {:?}", sunrise_time);
-        println!(
-            "2- sunrise_time: {:?}",
-            SolarTime::setting_hour(sunrise_time, &date)
-        );
         let sunset_time = ops::corrected_hour_angle(
             approx_transit,
             solar_altitude,
@@ -147,11 +137,6 @@ impl SolarTime {
             solar.declination,
             prev_solar.declination,
             next_solar.declination,
-        );
-        println!("1- sunset_time: {}", sunset_time);
-        println!(
-            "2- sunset_time: {:?}",
-            SolarTime::setting_hour(sunset_time, &date)
         );
 
         SolarTime {

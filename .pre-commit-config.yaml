@@ -45,4 +45,5 @@ repos:
         name: Unit Tests
         description: Run defined tests
         entry: cargo test
+        pass_filenames: false
         language: system

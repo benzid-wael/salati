@@ -23,15 +23,6 @@ mod constants;
 mod models;
 mod prayer_times;
 
-pub use crate::astronomy::qiblah::Qiblah;
-pub use crate::models::adjustments::{TimeAdjustment, TimeAdjustmentBuilder};
-pub use crate::models::madhab::Madhab;
-pub use crate::models::method::Method;
-pub use crate::models::parameters::{Parameters, ParametersBuilder};
-pub use crate::models::prayer::Prayer;
-pub use crate::models::twilight::Twilight;
-pub use crate::prayer_times::PrayerTimes;
-
 pub mod prelude {
     #[doc(no_inline)]
     pub use crate::astronomy::qiblah::Qiblah;
@@ -51,6 +42,8 @@ pub mod prelude {
     pub use crate::models::polar_circle_resolution::PolarCircleResolution;
     #[doc(no_inline)]
     pub use crate::models::prayer::Prayer;
+    #[doc(no_inline)]
+    pub use crate::models::prayer_time::PrayerTime;
     #[doc(no_inline)]
     pub use crate::models::twilight::Twilight;
     #[doc(no_inline)]

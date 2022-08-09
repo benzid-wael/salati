@@ -1,11 +1,12 @@
+use clap::ValueEnum;
+
 use super::adjustments::TimeAdjustmentBuilder;
 use super::high_latitude_rule::HighLatitudeRule;
-
 use super::parameters::{Parameters, ParametersBuilder};
 
 /// Provides preset configuration for a few authorities
 /// for calculating prayer times.
-#[derive(PartialEq, Debug, Copy, Clone)]
+#[derive(PartialEq, Debug, Copy, Clone, ValueEnum)]
 pub enum Method {
     /// Muslim World League
     MuslimWorldLeague,
