@@ -4,9 +4,11 @@ version = "0.0.1"
 edition = "2021"
 authors = ["Wael Ben Zid <benzid.wael@hotmail.fr>"]
 description = "Rust library to compute prayer times"
+repository = "https://github.com/benzid-wael/salati"
 rust-version = "1.62.1"
 readme = "README.md"
 license = "LGPL-3.0"
+keywords = ["salah", "prayer", "islam", "muslim"]
 
 [lib]
 crate-type = ["cdylib", "lib"]
