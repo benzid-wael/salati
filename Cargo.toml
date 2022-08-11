@@ -1,11 +1,12 @@
 [package]
 name = "salati"
-version = "0.0.0"
+version = "0.0.1"
 edition = "2021"
 authors = ["Wael Ben Zid <benzid.wael@hotmail.fr>"]
 description = "Rust library to compute prayer times"
 rust-version = "1.62.1"
 readme = "README.md"
+license = "LGPL-3.0"
 
 [lib]
 crate-type = ["cdylib", "lib"]
