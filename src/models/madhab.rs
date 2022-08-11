@@ -1,6 +1,7 @@
-// Setting for the Asr prayer time.
-// For Hanafi madhab, the Asr will be later
-#[derive(PartialEq, Debug, Copy, Clone)]
+use clap::ValueEnum;
+
+/// Setting for the Asr prayer time.
+#[derive(PartialEq, Debug, Copy, Clone, ValueEnum)]
 pub enum Madhab {
     Shafi = 1,
     Hanafi = 2,
@@ -9,6 +10,12 @@ pub enum Madhab {
 impl Madhab {
     pub fn shadow_length_ratio(&self) -> i32 {
         *self as i32
+    }
+}
+
+impl Default for Madhab {
+    fn default() -> Self {
+        Madhab::Shafi
     }
 }
 

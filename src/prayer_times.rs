@@ -13,20 +13,20 @@ use crate::models::prayer_time::PrayerTimeResolution;
 
 #[derive(PartialEq, Debug, Clone)]
 pub struct PrayerTimes {
-    fajr: PrayerTime,
-    sunrise: PrayerTime,
-    solar_sunrise: PrayerTime,
-    dhuhr: PrayerTime,
-    asr: PrayerTime,
-    maghrib: PrayerTime,
-    solar_sunset: PrayerTime,
-    isha: PrayerTime,
-    middle_of_the_night: PrayerTime,
-    qiyam: PrayerTime,
-    fajr_tomorrow: PrayerTime,
-    coordinates: Coordinates,
-    date: DateTime<Utc>,
-    parameters: Parameters,
+    pub fajr: PrayerTime,
+    pub sunrise: PrayerTime,
+    pub solar_sunrise: PrayerTime,
+    pub dhuhr: PrayerTime,
+    pub asr: PrayerTime,
+    pub maghrib: PrayerTime,
+    pub solar_sunset: PrayerTime,
+    pub isha: PrayerTime,
+    pub middle_of_the_night: PrayerTime,
+    pub qiyam: PrayerTime,
+    pub fajr_tomorrow: PrayerTime,
+    pub coordinates: Coordinates,
+    pub date: DateTime<Utc>,
+    pub parameters: Parameters,
 }
 
 fn calculate_solar_time(

@@ -1,43 +1,44 @@
+use clap::ValueEnum;
+
 use super::adjustments::TimeAdjustmentBuilder;
 use super::high_latitude_rule::HighLatitudeRule;
-
 use super::parameters::{Parameters, ParametersBuilder};
 
 /// Provides preset configuration for a few authorities
 /// for calculating prayer times.
-#[derive(PartialEq, Debug, Copy, Clone)]
+#[derive(PartialEq, Debug, Copy, Clone, ValueEnum)]
 pub enum Method {
-    // Muslim World League
+    /// Muslim World League
     MuslimWorldLeague,
 
-    //Egyptian General Authority of Survey
+    /// Egyptian General Authority of Survey
     Egyptian,
 
-    // University of Islamic Sciences, Karachi
+    /// University of Islamic Sciences, Karachi
     Karachi,
 
-    // Umm al-Qura University, Makkah
+    /// Umm al-Qura University, Makkah
     UmmAlQura,
 
-    // The Gulf Region
+    /// The Gulf Region
     Dubai,
 
-    // Moonsighting Committee
+    /// Moonsighting Committee
     MoonsightingCommittee,
 
-    // ISNA
+    /// ISNA
     NorthAmerica,
 
-    // Kuwait
+    /// Kuwait
     Kuwait,
 
-    // Qatar
+    /// Qatar
     Qatar,
 
-    // Singapore
+    /// Singapore
     Singapore,
 
-    // Other
+    /// Other
     Other,
 }
 
