@@ -1,0 +1,30 @@
+[package]
+name = "salati"
+version = "0.0.1"
+edition = "2021"
+authors = ["Wael Ben Zid <benzid.wael@hotmail.fr>"]
+description = "Rust library to compute prayer times"
+repository = "https://github.com/benzid-wael/salati"
+rust-version = "1.62.1"
+readme = "README.md"
+license = "LGPL-3.0"
+keywords = ["salah", "prayer", "islam", "muslim"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+doctest = true
+test = true
+doc = true
+
+[[bin]]
+name = "salati"
+path = "src/cli.rs"
+
+[dependencies]
+wasm-bindgen = "0.2.82"
+chrono = "0.4.6"
+clap = {version = "3.2.16", features = [ "derive" ]}
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+spectral = "0.6.0"

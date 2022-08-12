@@ -17,7 +17,7 @@ My main motivations to create a new repository are the followings:
 
 ## Usage
 
-Add the following to your Cargo.toml file under the 
+Add the following to your Cargo.toml file under the
 
 ```
 [dependencies]
@@ -39,7 +39,7 @@ println!("sunrise: {}", prayers.sunrise.datetime.unwrap());
 println!("dhuhr: {}", prayers.dhuhr.datetime.unwrap());
 println!("asr: {}", prayers.asr.datetime.unwrap());
 println!("maghrib: {}", prayers.maghrib.datetime.unwrap());
-println!("isha: {}", prayers.isha.datetime.         unwrap());
+println!("isha: {}", prayers.isha.datetime.unwrap());
 ```
 
 ## Configuration
@@ -136,4 +136,3 @@ pipenv run pre-commit install
 1. Make your changes into a new new branch
 1. Add unit tests for your changes
 1. Run unit tests: `cargo test`
-
