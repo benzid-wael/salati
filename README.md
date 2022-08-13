@@ -1,27 +1,27 @@
 # Salati
 
-Salati is a Rust that calculate prayer times according to most recent scientific research.
+Salati is a Rust that calculates prayer times according to most recent scientific research.
 
->  **DISCLAIMER** The code in this repo, is mainly copied from [salah](https://github.com/insha/salah). Typially, I'd create a PR in the other repositoy, but as I'm doing many changes where some are controversial I decided to create a new repository.
+>  **DISCLAIMER** The code in this repo, is mainly copied from [salah](https://github.com/insha/salah). Typically, I'd create a PR in the other repository, but as I'm doing many changes where some are controversial I decided to create a new repository.
 
 ## Why
 
 My main motivations to create a new repository are the followings:
 
 - Web Assembly support: planning to integrate it to [muslim-box](https://github.com/benzid-wael/muslim-box)
-- Surface assumptions/adjustments to users: One of my main concerns when using 3rd-party apps/libraries is being unaware of assumptions/corrections/adjustments which put me in ambiguity regarding prayer times. Note that it's we depend on this information to know imsak, iftar and prayer end time as well.
+- Surface assumptions/adjustments to users: One of my main concerns when using 3rd-party apps/libraries is being unaware of assumptions/corrections/adjustments which put me in ambiguity regarding prayer times. Note that it's we depend on this information to know Imsak, iftar and prayer end time as well.
 - Have more control over prayer time calculation:
-   - Which twilight to use to compute Isha time?
-   - How to calculate prayer time for places in polar circle?
+   - Which twilight to use to compute Isha's time?
+   - How to calculate prayer time for places in a polar circle?
 
 
 ## Usage
 
-Add the following to your Cargo.toml file under the
+Add the following to your `Cargo.toml` file under the
 
 ```
 [dependencies]
-salah = "0.0.0"
+salah = "0.0.1"
 ```
 
 To get prayer times, do the following
@@ -44,7 +44,7 @@ println!("isha: {}", prayers.isha.datetime.unwrap());
 
 ## Configuration
 
-You can configure your prayer times calculater as follow:
+You can configure how your prayer time is calculated by adjusting the following parameters:
 
 | Parameter              | Description |
 | ---------------------- | ----------- |
@@ -71,7 +71,7 @@ Provides preset configuration for a few authorities for calculating prayer times
 | `Dubai` | Method used in UAE. Fajr angle: 18.2, Isha angle: 18.2. |
 | `Qatar` | Modified version of Umm al-Qura used in Qatar. Fajr angle: 18, Isha interval: 90. |
 | `Kuwait` | Method used by the country of Kuwait. Fajr angle: 18, Isha angle: 17.5 |
-| `MoonsightingCommittee` | Moonsighting Committee. Fajr angle: 18, Isha angle: 18. Also uses seasonal adjustment values. |
+| `MoonsightingCommittee` | Moonsighting Committee. Fajr angle: 18, and Isha angle: 18. Also uses seasonal adjustment values. |
 | `Singapore` | Method used by Singapore. Fajr angle: 20, Isha angle: 18. |
 | `NorthAmerica` | Referred to as the ISNA method. Fajr angle: 15, Isha angle: 15 |
 | `Other` | Fajr angle: 0, Isha angle: 0. This is the default value for when manually initializing the `Parameters` struct. |
@@ -79,7 +79,7 @@ Provides preset configuration for a few authorities for calculating prayer times
 
 ### Madhab
 
-This setting is used only to calulate Asr prayer time:
+This setting is used only to calculate Asr prayer time:
 
 | Value    | Description |
 | -------- | ----------- |
@@ -98,7 +98,7 @@ Used to calculate Isha prayer time:
 
 ### High Latitude Rule
 
-Rule to adjust Fajr/Isha prayer time, we will fallback to this method when we end with invalid prayer times 🔜
+Rule to adjust Fajr/Isha prayer time, we will fall back to this method when we end with invalid prayer times 🔜
 
 | Value | Description |
 | ----- | ----------- |
@@ -107,7 +107,7 @@ Rule to adjust Fajr/Isha prayer time, we will fallback to this method when we en
 | `TwilightAngle` | Similar to SeventhOfTheNight, but instead of 1/7, the fraction of the night used is fajr_angle/60 and isha_angle/60 (default) |
 
 
-You are not sure which strategy to use? use `recommended` method:
+You are not sure which strategy to use? use the `recommended` method:
 
 ```rust
 const high_latitude_resolution = HighLatitudeRule::recommended(coordinates);
@@ -115,7 +115,7 @@ const high_latitude_resolution = HighLatitudeRule::recommended(coordinates);
 
 ### Polar Circle Resolution 🔜
 
-Used to resolve undefined prayer time in areas located in the polar circle whe sun does not set/rise.
+Used to resolve undefined prayer time in areas located in the polar circle where the sun does not set or rise.
 
 | Value | Description |
 | ----- | ----------- |
@@ -128,11 +128,11 @@ Used to resolve undefined prayer time in areas located in the polar circle whe s
 ## Development
 
 1. Clone Repository
-1. Set-up `pre-commit`
+1. Set up `pre-commit`
 ```shell
 pipenv install
 pipenv run pre-commit install
 ```
-1. Make your changes into a new new branch
+1. Make your changes to a new branch
 1. Add unit tests for your changes
 1. Run unit tests: `cargo test`
